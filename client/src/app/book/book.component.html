@@ -1,0 +1,21 @@
+<div class="book-container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Summary</th>
+      <th scope="col">Author</th>
+      <th scope="col">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.bookName}}</td>
+      <td>{{book.summary}}</td>
+      <td>{{book.authorId}}</td>
+      <td>{{book.typeId}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
