@@ -1,0 +1,22 @@
+<div class="card card-container">
+  <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+  <p id="profile-name" class="profile-name-card"></p>
+  <form class="form-signin">
+    <span id="re-auth-email" class="reauth-email"></span>
+    <input type="email" name="email" [(ngModel)]="email" class="form-control email" placeholder="Email address" required autofocus>
+    <input type="password" name="password" [(ngModel)]="password" class="form-control password" placeholder="Password" required>
+    <div id="remember" class="checkbox">
+      <label>
+        <input name="remember-me" [(ngModel)]="rememberMe" (change)="!rememberMe" type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <div>
+      <re-captcha  class="g-recaptcha" (captchaResponse)="handleCorrectCaptcha($event)" site_key="6LequGwUAAAAAOklWLdmyb_MXCpbRFIAdY772ljZ"></re-captcha>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block btn-sign-in" (click)="login()" type="submit">Sign in</button>
+  </form>
+  <a href="#" class="forgot-password">
+    Forgot the password?
+  </a>
+</div>
+
