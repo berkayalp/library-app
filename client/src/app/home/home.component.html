@@ -1,1 +1,53 @@
-<div>Home</div>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 navbar-expand-md">
+  <div class="navbar-brand d-flex align-items-center justify-content-between col-sm-12 col-md-2 mr-0">
+    <a class="mr-1 d-md-none text-light" href="#sidenav" data-toggle="collapse" data-target="#sidenav">
+      <span class="my-1 fa fa-ambulance"></span>
+      <span class="my-1 fa fa-ambulance"></span>
+    </a>
+    <a class="text-light" href="">Company</a>
+    <a class="navbar-toggler border-0 p-0" href="#topnav" data-toggle="collapse" data-target="#topnav">
+      <span class="my-1 fa fa-file"></span>
+    </a>
+  </div>
+  <div class="navbar-collapse collapse" id="topnav">
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3 py-2">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row navbar-expand-md">
+    <nav class="col-md-3 col-lg-2 bg-light navbar-collapse collapse sidebar" id="sidenav">
+      <div class="sidebar-sticky flex-column w-100 mt-1">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span class="fa fa-home"></span> Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="book">
+              <span class="fa fa-amazon"></span> Books
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span class="fa fa-ambulance"></span> Authors
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+      <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+</div>

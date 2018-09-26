@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ReCaptchaComponent } from 'angular2-recaptcha';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {ReCaptchaComponent} from 'angular2-recaptcha';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -13,17 +14,19 @@ export class LoginComponent implements OnInit {
 
   @ViewChild(ReCaptchaComponent) captcha: ReCaptchaComponent;
 
-  constructor() { }
+  constructor(private _router: Router) {
+  }
 
   ngOnInit() {
   }
 
   login() {
     console.log(this.email + ' ' + this.password + ' ' + this.rememberMe);
+    this._router.navigate(['./home']);
   }
 
   handleCorrectCaptcha(res) {
-    let token= this.captcha.getResponse();
+    let token = this.captcha.getResponse();
     console.log(token);
   }
 
